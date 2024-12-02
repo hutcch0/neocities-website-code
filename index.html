@@ -1,22 +1,182 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    
-        <div id="container"><div id="header" style="height: 204px;"></div>
-            <div id="headerArea">
-                
-                
-            <nav id="navbar" style="margin-bottom: 10px;"><ul>
-                <li><a href="https://hutcch.neocities.org/">Home</a></li>
-                <li><a href="https://hutcch.neocities.org/moreabouthutcch">more about hutcch</a></li>
-                <li><a href="https://hutcch.neocities.org/likeornah">do i like that</a></li>
-                <li><a href="https://hutcch.neocities.org/projects">projects</a></li>
-                <li><a href="https://hutcch.neocities.org/facts">facts</a></li>
-                <li><a href="https://hutcch.neocities.org/link#">Links</a></li>
-              </ul></nav></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hutcch's personal website with information, projects, and more.">
+  <title>About Hutcch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Define root variables for colors, fonts, etc. */
+    :root {
+      --primary-bg: #08030d; /* Updated background color */
+      --secondary-bg: #08030d;
+      --accent-color: #ED64F5;
+      --link-hover: #a49cba;
+      --header-bg: #5e4e8c;
+      --font-color: #0a999e; /* Updated text color */
+      --container-max-width: 1200px;
+    }
 
-            <div id="flex">
-                
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    body {
+      background-color: var(--primary-bg);
+      color: var(--font-color);
+      line-height: 1.6;
+    }
+
+    #container {
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-color);
+    }
+
+    /* Header Styles */
+    #header {
+      background-color: var(--header-bg);
+      height: 150px;
+      background-image: url('https://i.pinimg.com/originals/bc/87/e5/bc87e5124f8d2cfe810d403adc96ad01.gif');
+      background-size: cover;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* Navigation Bar */
+    #navbar {
+      background-color: #08030d;
+      padding: 10px 0;
+    }
+
+    #navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    #navbar li {
+      margin: 0 15px;
+    }
+
+    #navbar li a {
+      color: var(--accent-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    #navbar li a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Main Layout (Content and Sidebars) */
+    #flex {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    main {
+      flex: 1;
+      background-color: #08030d;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    aside {
+      background-color: var(--secondary-bg);
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .box {
+      background-color: #13092D;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid var(--accent-color);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #13092D;
+      text-align: center;
+      padding: 10px;
+      color: var(--accent-color);
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      aside {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      main {
+        order: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <!-- Header -->
+    <div id="header">
+      <h1>About Hutcch</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <ul>
+        <li><a href="https://hutcch.neocities.org/">Home</a></li>
+        <li><a href="https://hutcch.neocities.org/moreabouthutcch">More About Hutcch</a></li>
+        <li><a href="https://hutcch.neocities.org/likeornah">Do I Like That</a></li>
+        <li><a href="https://hutcch.neocities.org/projects">Projects</a></li>
+        <li><a href="https://hutcch.neocities.org/facts">Facts</a></li>
+        <li><a href="https://hutcch.neocities.org/link#">Links</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="flex">
+    
                 <main>
                     <h1>about hutcch</h1>
                     <p><strong>Please read this first!</strong></p>
@@ -24,267 +184,46 @@
                     <p>So you got pass the first bit, well welcome, here's some information about me, am 19 my names hutcch (p.s I will never give my real name unless we close friends, or I say it randomly) birthday 30th of December 2004 (am old I know)</p>
                     <p>my steam ladder so you can see my account if you want <a href="https://steamladder.com/profile/76561198152256309/" target="_blank">steam ladder</a> If you ever want to add my steam account, let me know beforehand though discord (my discord is - hutcch)</p>
                     <p>Also check the other tabs to learn more</p>
-                    <p>my top 5 favourite games<p>
-                    <p>1. Black ops 2 (a bit of context this was and still is the best cod game hands down the gun play the maps the videos on it was amazing the best time to be alive and actually enjoy life and the game at the same time)</p>
-                    <p>2. minecraft (I don't have to give context to this one)<p>
-                    <p>3. team fortress 2 (Join Date: Tuesday, September 2, 2014 (15:53:36) GMT I did join late but was still there and OMG was it fun I was bad and still am, but it was fun as hell, but I moved away from it but came back to it and now an admin on pg servers)<p>
-                    <p>4. gmod (I loved VanossGaming gmod videos, so I played it with friends or solo and the modded guns/items is amazing what you can do and just random thing of as a game mode to play)<p>
-                    <p>5. terraria(Again no context needed I first played it with a childhood friend, and we couldn't even build houses or places door, and now I have completed the game 3 times on pc and more on Xbox 360/Xbox One)<p>
+                    <p><strong>my top 5 favourite games</strong><p>
+                    <p><strong>1. Black ops 2</strong> (a bit of context this was and still is the best cod game hands down the gun play the maps the videos on it was amazing the best time to be alive and actually enjoy life and the game at the same time)</p>
+                    <p><strong>2. minecraft</strong> (I don't have to give context to this one)<p>
+                    <p><strong>3. team fortress 2</strong> (Join Date: Tuesday, September 2, 2014 (15:53:36) GMT I did join late but was still there and OMG was it fun I was bad and still am, but it was fun as hell, but I moved away from it but came back to it and now an admin on pg servers)<p>
+                    <p><strong>4. gmod</strong> (I loved VanossGaming gmod videos, so I played it with friends or solo and the modded guns/items is amazing what you can do and just random thing of as a game mode to play)<p>
+                    <p><strong>5. terraria</strong> (Again no context needed I first played it with a childhood friend, and we couldn't even build houses or places door, and now I have completed the game 3 times on pc and more on Xbox 360/Xbox One)<p>
 
                     <p>There's more like cyberpunk palworld etc, but I have more hours in the games above, but most games are good</p>
 
                 </main>
-                
-            <aside id="rightSidebar" style="margin-left: 10px;"><h2>Updates</h2>
-            <div class="box">
-                <p>I have recently updated this website 18 November 2024 at 12:00am</p>
-                <ul style="padding-left:10px;">
-                    <li>added a more on the project tab</li>
-                    <li>Missed even more sleep</li>
-                    <li>Added more on the links tab</li>
-                    <li>Am still very old</a></li>
-                </ul>
-            </div>
-            <h2>Hi there!</h2>
-            <p>Do you have a suggestion for a feature? Yes, cool anyway</p>
-            <h3>Other links</h3>
-            <ul>
-                <li><a href="https://www.youtube.com/channel/UCbhfUDBi3YEXRTJGI5EXtQQ" target="_blank">youtube</a>
-                </li><li><a href="https://www.twitch.tv/hutcch0" target="_blank">twitch</a></li>
-                <li><a href="https://www.instagram.com/huttch0/" target="_blank">instagram</a></li>
-                <li><a href="https://twitter.com/Hutcch2" target="_blank">twitter (X)</a></li>
-            </ul></aside></div>
-            
-        <footer id="footer" style="margin-top: 10px;"></footer></div>
-        <!-- THIS IS THE CSS !-->
-        <style>
 
-            :root {
-                --header-image: url('https://i.pinimg.com/originals/bc/87/e5/bc87e5124f8d2cfe810d403adc96ad01.gif');
-                --body-bg-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png');
+      <!-- Sidebar (Updates, Suggestions) -->
+      <aside id="rightSidebar">
+        <h2>Updates</h2>
+        <div class="box">
+          <p>I recently updated this website on <strong>November 18, 2024</strong> at 12:00am</p>
+          <ul>
+            <li>Added more content to the projects tab.</li>
+            <li>Missed even more sleep.</li>
+            <li>Updated the links tab.</li>
+          </ul>
+        </div>
+        <h2>Hi there!</h2>
+        <p>Do you have a suggestion for a feature?Yes, cool anyway</p>
+        <h3>Other Links</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/channel/UCbhfUDBi3YEXRTJGI5EXtQQ" target="_blank">YouTube</a></li>
+          <li><a href="https://www.twitch.tv/hutcch0" target="_blank">Twitch</a></li>
+          <li><a href="https://www.instagram.com/huttch0/" target="_blank">Instagram</a></li>
+          <li><a href="https://twitter.com/Hutcch2" target="_blank">Twitter (X)</a></li>
+        </ul>
+      </aside>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Hutcch. All rights reserved.</p>
+    </footer>
 
-                /* colors */
-                --content: #43256E;
-            }
+  </div>
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-            }
-
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-                font-weight: bold;
-            }
-
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-                font-style: italic;
-            }
-
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-                font-style: italic;
-                font-weight: bold;
-            }
-
-            body {
-                font-family: 'Nunito', sans-serif;
-                margin: 0;
-                background-color: #08031A;
-                background-size: 65px;
-                color: #fceaff;
-                background-image: var(--body-bg-image);
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-            
-            #container {
-                max-width: 900px;
-                margin: 0 auto;
-            }
-
-            /* the area below is for all links on your page
-    EXCEPT for the navigation */
-            #container a {
-                color: #ED64F5;
-                font-weight: bold;
-                /* if you want to remove the underline
-      you can add a line below here that says:
-      text-decoration:none; */
-            }
-
-            #header {
-                width: 100%;
-                background-color: #5e4e8c;
-                /* header color here! */
-                height: 150px;
-                /* this is only for a background image! */
-                /* if you want to put images IN the header, 
-      you can add them directly to the <div id="header"></div> element! */
-                background-image: var(--header-image);
-                background-size: 100%;
-            }
-
-            /* navigation section!! */
-            #navbar {
-                height: 40px;
-                background-color: #13092D;
-                /* navbar color */
-                width: 100%;
-            }
-
-            #navbar ul {
-                display: flex;
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-                justify-content: space-evenly;
-            }
-
-            #navbar li {
-                padding-top: 10px;
-            }
-
-            /* navigation links*/
-            #navbar li a {
-                color: #ED64F5;
-                /* navbar text color */
-                font-weight: 800;
-                text-decoration: none;
-                /* this removes the underline */
-            }
-
-            /* navigation link when a link is hovered over */
-            #navbar li a:hover {
-                color: #a49cba;
-                text-decoration: underline;
-            }
-
-            #flex {
-                display: flex;
-            }
-
-            /* this colors BOTH sidebars
-    if you want to style them separately,
-    create styles for #leftSidebar and #rightSidebar */
-            aside {
-                background-color: #241445;
-                width: 200px;
-                padding: 20px;
-                font-size: smaller;
-                /* this makes the sidebar text slightly smaller */
-            }
-
-
-            /* this is the color of the main content area,
-    between the sidebars! */
-            main {
-                background-color: #43256E;
-                flex: 1;
-                padding: 20px;
-                order: 2;
-            }
-
-            /* what's this "order" stuff about??
-    allow me to explain!
-    if you're using both sidebars, the "order" value
-    tells the CSS the order in which to display them.
-    left sidebar is 1, content is 2, and right sidebar is 3! */
-
-            */ #leftSidebar {
-                order: 1;
-            }
-
-            #rightSidebar {
-                order: 3;
-            }
-
-            footer {
-                background-color: #13092D;
-                /* background color for footer */
-                width: 100%;
-                height: 40px;
-                padding: 10px;
-                text-align: center;
-                /* this centers the footer text */
-            }
-
-            h1,
-            h2,
-            h3 {
-                color: #ED64F5;
-            }
-
-            h1 {
-                font-size: 25px;
-            }
-
-            strong {
-                /* this styles bold text */
-                color: #ED64F5;
-            }
-
-            /* this is just a cool box, it's the darker colored one */
-            .box {
-                background-color: #13092D;
-                border: 1px solid #ED64F5;
-                padding: 10px;
-            }
-
-            /* CSS for extras */
-
-            #topBar {
-                width: 100%;
-                height: 30px;
-                padding: 10px;
-                font-size: smaller;
-                background-color: #13092D;
-            }
-
-
-            /* BELOW THIS POINT IS MEDIA QUERY */
-
-            /* so you wanna change the width of your page? 
-    by default, the container width is 900px.
-    in order to keep things responsive, take your new height,
-    and then subtrack it by 100. use this new number as the 
-    "max-width" value below
-    */
-
-            @media only screen and (max-width: 800px) {
-                #flex {
-                    flex-wrap: wrap;
-                }
-
-                aside {
-                    width: 100%;
-                }
-
-                /* the order of the items is adjusted here for responsiveness!
-      since the sidebars would be too small on a mobile device.
-      feel free to play around with the order!
-      */
-                main {
-                    order: 1;
-                }
-
-                #leftSidebar {
-                    order: 2;
-                }
-
-                #rightSidebar {
-                    order: 3;
-                }
-
-                #navbar ul {
-                    flex-wrap: wrap;
-                }
-            }
-        </style>
+</body>
 </html>

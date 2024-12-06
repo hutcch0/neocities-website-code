@@ -1,0 +1,79 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #08030d, #2c003e); 
+            color: #ecf0f1;
+        }
+
+        header {
+            background: linear-gradient(135deg, #08030d, #2c003e); 
+            color: #0a999e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #0a999e;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .links-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .link-card {
+            background: linear-gradient(135deg, #08030d, #2c003e); 
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .link-card:hover {
+            transform: scale(1.05); 
+        }
+
+        .link-title {
+            font-size: 20px;
+            color: #ecf0f1;
+            margin-bottom: 10px;
+        }
+
+        .link-description {
+            font-size: 16px;
+            color: #bdc3c7;
+            margin-bottom: 15px;
+        }
+
+        .link-url a {
+            color: #0a999e;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .link-url a:hover {
+            text-decoration: underline;
+        }

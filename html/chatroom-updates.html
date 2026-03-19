@@ -1,177 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>blog</title>
-<link rel="stylesheet" href="/static/css/blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive | Chatroom Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #08030d, #2c003e);
+            --blue-gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --accent: #38bdf8;
+            --archive-red: #ef4444;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--main-gradient);
+            background-attachment: fixed;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background: rgba(8, 3, 13, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .archive-banner {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--archive-red);
+            color: var(--archive-red);
+            text-align: center;
+            padding: 15px;
+            margin: 2rem auto;
+            max-width: 900px;
+            border-radius: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        .card h5 {
+            color: var(--text-dim);
+            margin: -10px 0 20px 0;
+            font-weight: 400;
+        }
+
+        .card p { margin: 8px 0; font-size: 0.95rem; }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+
+        .sidebar-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .side-nav { list-style: none; padding: 0; }
+        .side-nav li { margin: 10px 0; }
+        .side-nav a { color: var(--text); text-decoration: none; }
+        .side-nav a:hover { color: var(--accent); }
+
+        @media (max-width: 800px) {
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">
-  <h2>Welcome to chatroom updates</h2>
-</div>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>Introduction</h2>
-      <h5>Posted on: December 1, 2024</h5>
-	    <p>I built this chatroom because I wanted a fun, independent space to connect with people online and put my coding skills to the test.</p>
-    </div>
-    
-        <div class="card">
-      <h2>v1.05</h2>
-      <h5>Posted on: December 8, 2024</h5>
-            <p>added v1.04 page</p>
-            <p>moved the rules page to the blog</p>
-            <p>added a beta feature page</p>
-            <p>new beta feature video</p>
-    </div>
-    <div class="card">
-      <h2>v1.04</h2>
-      <h5>Posted on: December 2, 2024 | updated on: December 6 2024</h5>
-      <p>got rid of news page</p>
-			<p>got rid of about me page</p>
-			<p>made a blog page</p>
-			<p>redid the games page</p>
-			<p>added Dice Roll (does give money)</p>
-			<p>added Higher or Lower game (does give money)</p>
-			<p>added Coin Flip (does give money)</p>
-			<p>changed game page title</p>
-			<p>redid the profile page</p>
-			<p>redid the leaderboard page again</p>
-			<p>redid the rules page</p>
-			<p>redid the chatroom page</p>
-			<p>redid the login page</p>
-			<p>redid the register page</p>
-			<p>Added a page for suggestions.</p>
-			<p>added a Privacy Policy page</p>
-			<p>added a 🎄 December Special Badge</p>
-			<p>Help/FAQ Section</p>
-			<p>made v1.03 page</p>
-      <p>made v1.02 page</p>
-      <p>made FAQ page</p>
-      <p>made Planned Updates page</p>
-      <p>made bugs fixes page</p>
-      <p>discord bot as new cmds i.e money, buying coins and sell coins but not nearly close to connect to the website</p>
-      <p>updated the website</p>
-      <p>changed guess the number to a chance to win no longer a betting game</p>
-      <p>Coin Flip is now a betting game</p>
-      <p>made it so you can get to the suggestions page</p>
-      <p>added going forward page</p>
-      
-      
-    <div class="card">
-      <h2>v1.03</h2>
-      <h5>Posted on: november  26, 2024</h5>
-            <p>now we have pictures you can use(use image_finder to see all of them and how to use them)</p>
-            <p>a custom user name feature.</p>
-            <p>added games and a leaderboard</p>
-            <p>redid games page</p>
-            <p>redid the leaderboard page</p>
-            <p>added blackjack</p>
-            <p>added spin the wheel</p>
-            <p>added guess the number</p>
-            <p>first bit done for the bot just need to do part two that connect the two together</p>
-            <p>added Badges</p>
-            <p>added a user profile</p>
-            <p>added a drop down-menu on the main chatroom page to clean-up the buttons</p>
-            <p>🥉badge of 1 message sent</p>
-            <p>🥈badge of 100 messages sent</p>
-            <p>🥇badge of 500 messages sent</p>
-            <p>🎖️badge of 1,000 messages sent️</p>
-            <p>🏆badge of 5,000 messages sent</p>
-            <p>🪙badge of 100 fake money</p>
-            <p>💴badge of 5,000 fake money</p>
-            <p>💵badge of 10,000 fake money</p>
-            <p>💸badge of 50,000 fake money</p>
-            <p>💰badge of 100,000 fake money</p>
-            <p>redid the about page</p>
-
-    <div class="card">
-      <h2>past updates</h2>
-      <h5>v1.02 | Posted on: november  21, 2024</h5>
-            <p>Added about the project page.</p>
-            <p>Added news page.</p>
-            <p>Cleaned the front chatroom up.</p>
-            <p>Cleaned the code up.</p>
-            <p>Runs faster.</p>
-            <p>Fixed bugs.</p>
-            <p>Added a database.</p>
-            <p>Character limit (1000 Characters).</p>
-            <p>Adding a user name feature.</p>
-            <p>fixed the news page now the title shows</p>
-            <p>now updates in real time after 3 seconds</p>
-            <p>Moderation features</p>
-            <p>changed the background colour</p>
-            <p>updated the about me page</p>
-            <p>Word filters</p>
-            <p>rules page</p>
-    </div>
-    
-    <div class="card">
-      <h2>Planned Updates</h2>
-      <h5>Posted on: november 21, 2024</h5>
-            <p>Emojis and Reactions</p>
-            <p>Special Effects</p>
-            <p>have a forum</p>
-            <p>Hidden Easter Eggs</p>
-            <p>Debate Nights/Talent Shows</p>
-            <p>Time Capsule</p>
-            <p>Whisper Mode</p>
-            <p>Chatroom Mascot</p>
-            <p>Morse Code Mode</p>
-            <p>Emoji-Only Communication</p>
-            <p>Live Polls and Surveys</p>
-            <p>Time-Limited Chatrooms</p>
-            <p>adding dms</p>
-            <p>adding mentions and tagging</p>
-            <p>music Integration</p>
-            <p>Anonymous Mode</p>
-            <p>User Polls or Votes</p>
-            <p>Seasonal Features</p>
-            <p>Marketplace to spend fake money in</p>
-            <p>Flash Events and Surprise Features</p>
-            <p>Group Challenges</p>
-            <p>Community Challenges with Rewards</p>
-            <p>Hot Seat events</p>
-
-    </div>
-    
-    <div class="card">
-      <h2>bugs fixed</h2>
-      <h5>Posted on: December 21, 2024</h5>
-            <p>Fix code: Information exposure through an exception</p>
-            <p>Fix code: Flask app is run in debug mode</p>
-            <p>fix: Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain</p>
-            <p>fixed the word you being in the blacklist</p>
-            <p>Higher or Lower now works</p>
-            <p>Coin Flip now works</p>
-            
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>links</h2>
-               <li><a href="https://hutcch.eu.pythonanywhere.com/">the chatroom</a></li>
-               <li><a href="https://x.com/chatroombyHVN">x(twitter)</a></li>
-    </div>
-    <div class="card">
-      <h3>different pages</h3>
-            <ul>
+    <header class="main-header">
+        <nav>
+            <ul class="nav-links">
                 <li><a href="/html/index.html">Home</a></li>
                 <li><a href="/html/about-me.html">About Me</a></li>
-                <li><a href="/html/blog.html">blog</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
                 <li><a href="/html/Projects-Page.html">Projects</a></li>
-                <li><a href="/html/Links-Page.html.html">Links</a></li>
+                <li><a href="/html/card.html">Links</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <div class="archive-banner">
+        ⚠️ PROJECT STATUS: ARCHIVED & DISCONTINUED
     </div>
-    <div class="card">
-      <h3>github</h3>
-      <p>the files are on github <a href="https://github.com/hutcch0/chatroom-website/tree/main">website</a></p>
-    </div>
-  </div>
-</div>
+
+    <main class="container">
+        <section>
+            <div class="card">
+                <h2>Project Introduction</h2>
+                <h5>Original Launch: December 1, 2024</h5>
+                <p>I built this chatroom because I wanted a fun, independent space to connect with people online and put my coding skills to the test.</p>
+            </div>
+
+            <div class="card">
+                <h2>Version 1.05</h2>
+                <h5>Released: December 8, 2024</h5>
+                <p>• Added v1.04 archive page</p>
+                <p>• Moved the rules page to the blog</p>
+                <p>• Added a beta feature page with video demo</p>
+            </div>
+
+            <div class="card">
+                <h2>Version 1.04</h2>
+                <h5>Released: Dec 2, 2024 | Updated: Dec 6, 2024</h5>
+                <p>• Redid UI: Profile, Leaderboard, Chatroom, Login, and Register pages</p>
+                <p>• Added Games: Dice Roll, Higher/Lower, and Coin Flip (Betting enabled)</p>
+                <p>• Security: Added Suggestion page and Privacy Policy</p>
+                <p>• Backend: Discord bot money commands added (Separate from site)</p>
+            </div>
+
+            <div class="card">
+                <h2>Version 1.03</h2>
+                <h5>Released: November 26, 2024</h5>
+                <p>• Feature: Custom Usernames and User Profiles</p>
+                <p>• Feature: Picture Support (via image_finder)</p>
+                <p>• Games: Added Blackjack, Spin the Wheel, and Guess the Number</p>
+                <p>• <strong>Achievements System Added:</strong></p>
+                <div class="badge-grid">
+                    <span>🥉 1 Message Sent</span>
+                    <span>🥈 100 Messages Sent</span>
+                    <span>🥇 500 Messages Sent</span>
+                    <span>🎖️ 1,000 Messages Sent</span>
+                    <span>🏆 5,000 Messages Sent</span>
+                    <span>💰 100k Fake Money</span>
+                </div>
+            </div>
+
+            <div class="card" style="opacity: 0.7;">
+                <h2>Planned (Unreleased)</h2>
+                <h5>Ideas from Nov 2024</h5>
+                <p>• Whisper Mode & DMs</p>
+                <p>• Music Integration & Live Polls</p>
+                <p>• Marketplace for spending fake money</p>
+                <p>• Morse Code Mode (Experimental)</p>
+            </div>
+
+            <div class="card">
+                <h2>Bug Fixes</h2>
+                <h5>Last Update: December 21, 2024</h5>
+                <p>• Fixed: Flask app debug mode security risk</p>
+                <p>• Fixed: Werkzeug debugger vulnerability</p>
+                <p>• Fixed: Blacklist filter (removed the word 'you')</p>
+                <p>• Fixed: Game logic for Higher/Lower and Coin Flip</p>
+            </div>
+        </section>
+
+        <aside>
+            <div class="sidebar-box">
+                <h3>Project Links</h3>
+                <ul class="side-nav">
+                    <li><a href="https://github.com/hutcch0/chatroom-website/tree/main">GitHub Repository</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3>Page Status</h3>
+                <p style="font-size: 0.85rem; color: var(--text-dim);">
+                    This project is officially closed. No further bug fixes or features will be implemented.
+                </p>
+            </div>
+        </aside>
+    </main>
 
 </body>
 </html>

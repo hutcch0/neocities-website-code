@@ -1,51 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>blog</title>
-<link rel="stylesheet" href="/static/css/blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates | Hutcch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #08030d, #2c003e);
+            --blue-gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --accent: #38bdf8;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+            --warning: #fbbf24;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--main-gradient);
+            background-attachment: fixed;
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .main-header {
+            background: rgba(8, 3, 13, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .update-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            overflow: visible; 
+            height: auto;
+        }
+
+        .update-card h1 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            background: var(--blue-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .post-meta {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .update-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 15px;
+        }
+
+        .update-item span { color: var(--accent); font-weight: bold; }
+
+        .alert-wrapper {
+            display: block !important;
+            width: 100%;
+            margin-top: 2rem;
+            min-height: 100px;
+            clear: both;
+        }
+
+        .privacy-alert {
+            display: block !important;
+            visibility: visible !important;
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: var(--warning);
+            position: relative;
+            z-index: 10;
+        }
+
+        .sidebar-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .side-nav { list-style: none; padding: 0; }
+        .side-nav li { margin: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;}
+        .side-nav a { color: var(--text); text-decoration: none; transition: 0.2s; }
+        .side-nav a:hover { color: var(--accent); padding-left: 5px; }
+
+        @media (max-width: 800px) {
+            .content-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">
-  <h2>updates</h2>
-</div>
-
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>every update that has happened this year</h2>
-      <h5>Posted on: August 16, 2025</h5>
-            <p>the chatroom is not being worked on anymore a lot of issues popped up will say more later</p>
-            <p>started a discord bot last year and finally getting around to it, files are on github like always</p>
-            <p>the website will have music and more projects plus more text on the about me (still need to do)</p>
-            <p>been looking at ai art its fun to mess around with it. Heres the link to see what i have done so far - <a href="https://www.pixiv.net/en/users/118980426">pixiv</a></p>
-            <p>moved over to linux (do it move over to the good side)</p>
-            <p>been making games will show more updates when ready</p>
-            <p>hate imgur posted pictures of cats and there got rid of it</p>
-            <p>fight for freedom, the uk as asked us to give are id out use a vpn when you can and never give in</p>
-            
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>links</h2>
-               <li><a href="https://x.com/chatroombyHVN">x(twitter)</a></li>
-    </div>
-    <div class="card">
-      <h3>different pages</h3>
-            <ul>
+    <header class="main-header">
+        <nav>
+            <ul class="nav-links">
                 <li><a href="/html/index.html">Home</a></li>
                 <li><a href="/html/about-me.html">About Me</a></li>
-                <li><a href="/html/blog.html">blog</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
                 <li><a href="/html/Projects-Page.html">Projects</a></li>
-                <li><a href="/html/Links-Page.html.html">Links</a></li>
+                <li><a href="/html/card.html">Links</a></li>
             </ul>
-    </div>
-    <div class="card">
-      <h3>github</h3>
-      <p>the files are on github <a href="https://github.com/hutcch0/bot/tree/main">discord bot</a></p>
-    </div>
-  </div>
-</div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <article class="update-card">
+            <h1>2025 Retrospective</h1>
+            <div class="post-meta">Current Status: Active | Last Log: August 16, 2025</div>
+            
+            <div class="update-content">
+                <div class="update-item">
+                    <span>•</span> 
+                    <p>The Chatroom project is currently suspended. Several technical issues arose, and I'll provide a deeper breakdown when the time is right.</p>
+                </div>
+
+                <div class="update-item">
+                    <span>•</span> 
+                    <p>Picking up the pace on the <strong>Discord Bot</strong> I started last year. Files are being pushed to GitHub regularly.</p>
+                </div>
+
+                <div class="update-item">
+                    <span>•</span> 
+                    <p>Working on site-wide music integration and expanding the "About Me" section (WIP).</p>
+                </div>
+
+                <div class="update-item">
+                    <span>•</span> 
+                    <p>Officially moved over to <strong>Linux</strong>. Join the good side—the freedom is worth it.</p>
+                </div>
+
+                <div class="update-item">
+                    <span>•</span> 
+                    <p>Game development is in progress. Expect updates and showcases soon.</p>
+                </div>
+
+                <div class="alert-wrapper">
+                        <strong>🛡️ Privacy Notice:</strong> Fight for freedom. With the UK's recent push for ID requirements, protect yourself. Use a VPN whenever possible and never give in on your digital privacy.
+                </div>
+            </div>
+        </article>
+
+        <aside>
+            <div class="sidebar-box">
+                <h3 style="color:var(--accent); margin-top:0;">Dev Links</h3>
+                <ul class="side-nav">
+                    <li><a href="https://github.com/hutcch0/bot/tree/main">Discord Bot Repo</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3 style="color:var(--accent); margin-top:0;">Navigation</h3>
+                <ul class="side-nav">
+                    <li><a href="/html/index.html">Home</a></li>
+                    <li><a href="/html/about-me.html">About Me</a></li>
+                    <li><a href="/html/blog.html">Blog Home</a></li>
+                    <li><a href="/html/Projects-Page.html">View Projects</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
 
 </body>
 </html>

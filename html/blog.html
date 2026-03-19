@@ -1,77 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>blog</title>
-<link rel="stylesheet" href="/static/css/blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Hutcch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/new.css">
+    
 </head>
 <body>
 
-<div class="header">
-  <h2>Welcome to My Blog</h2>
-</div>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
 
-<div class="row">
-    <div class="leftcolumn">
-    <div class="card">
-      <h2>updates</h2>
-      <h5>Posted on: August 16, 2025</h5>
-            <p>every update that has happened this year</p>
-            <li><a href="/html/updates.html">update so far</a></li>
-    </div>
-  </div>
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <p>Updates and News</p>
+    </header>
 
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>chatroom updates</h2>
-      <h5>Posted on: December 6, 2024 | updated on: December 8, 2024</h5>
-            <p>every update that has happened on my website</p>
-            <li><a href="/html/chatroom-updates.html">chatroom updates</a></li>
-    </div>
-  </div>
-  
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>update on whats going on</h2>
-      <h5>Posted on: December 9, 2024</h5>
-            <p>what have i been up to and whats going to be added to the website</p>
-            <li><a href="/html/going-on.html">chatroom updates</a></li>
-    </div>
-  </div>
-  
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>new look</h2>
-      <h5>Posted on: December 6, 2024</h5>
-            <p>my neocitie website has a new look, plus less text, no useless info and storys.</p>
-            <p>new photos, new links</p>
-            <p>new colours, new background, less pages</p>
-            <p>and still in a wip so bare with</p>
-    </div>
-  </div>
-  
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>links</h2>
-               <li><a href="https://hutcch.eu.pythonanywhere.com/">the chatroom</a></li>
-               <li><a href="https://x.com/chatroombyHVN">x(twitter)</a></li>
-    </div>
-    <div class="card">
-      <h3>different pages</h3>
- 		     <ul>
-            <li><a href="/html/index.html">Home</a></li>
-            <li><a href="/html/about-me.html">About Me</a></li>
-            <li><a href="/html/blog.html">blog</a></li>
-            <li><a href="/html/Projects-Page.html">Projects</a></li>
-            <li><a href="/html/Links-Page.html.html">Links</a></li>
-        </ul>
-    </div>
-    <div class="card">
-      <h3>github</h3>
-      <p>the files are on github <a href="https://github.com/hutcch0/chatroom-website/tree/main">website</a></p>
-    </div>
-  </div>
-</div>
+    <main class="container">
+        <section>
+        
+            <article class="card">
+                <span class="date">March 19, 2026</span>
+                <h2>Updates and plans</h2>
+                <p>Every update that has happened this year plus whats happening this year.</p>
+                <a href="/html/update19-3-26.html" class="read-more">Whats happening in 2026 →</a>
+            </article>
+            
+            <article class="card">
+                <span class="date">August 16, 2025</span>
+                <h2>Updates</h2>
+                <p>Every update that has happened this year.</p>
+                <a href="/html/updates.html" class="read-more">Update so far →</a>
+            </article>
 
+            <article class="card">
+                <span class="date">Dec 6, 2024</span>
+                <h2>Chatroom Updates</h2>
+                <p>Every update that has happened on my website.</p>
+                <a href="/html/chatroom-updates.html" class="read-more">View History →</a>
+            </article>
+
+            <article class="card">
+                <span class="date">Dec 9, 2024</span>
+                <h2>Update on What's Going On</h2>
+                <p>What I've been up to and what's going to be added to the website.</p>
+                <a href="/html/going-on.html" class="read-more">Read More →</a>
+            </article>
+        </section>
+
+        <aside>
+            <div class="sidebar-box">
+                <span class="supporter-badge">★ Neocities Supporter</span>
+                <h3>Site Stats</h3>
+                <p style="font-size: 0.85rem; color: var(--text-dim);">
+                    Views on website: <strong>3,442</strong>
+                </p>
+                <div class="hit-counter">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=hutcch-blog&style=0007&nbdigits=5&type=page&initCount=2133" alt="Hits">
+                </div>
+            </div>
+
+            <div class="sidebar-box">
+                <h3>Pages</h3>
+                <ul class="side-nav">
+                    <li><a href="/html/index.html">Home</a></li>
+                    <li><a href="/html/about-me.html">About Me</a></li>
+                    <li><a href="/html/Projects-Page.html">Projects</a></li>
+                    <li><a href="/html/card.html">Links</a></li>
+                    <li><a href="https://github.com/hutcch0/chatroom-website/tree/main">GitHub</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+    </script>
 </body>
 </html>

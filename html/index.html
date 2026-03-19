@@ -3,49 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notice Board</title>
+    <title>Notice Board | Hutcch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/notice-board.css">
+    <style>
+        .progress-container {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+        }
+        .progress-bar {
+            height: 4px;
+            background: #38bdf8;
+            width: 0%;
+        }
+
+        .supporter-badge {
+            display: inline-block;
+            color: #f59e0b;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hit-counter {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-    <header>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <header class="main-header">
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="/html/index.html">Home</a></li>
                 <li><a href="/html/about-me.html">About Me</a></li>
-                <li><a href="/html/blog.html">blog</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
                 <li><a href="/html/Projects-Page.html">Projects</a></li>
-                <li><a href="/html/Links-Page.html.html">Links</a></li>
+                <li><a href="/html/card.html">Links</a></li>
             </ul>
         </nav>
     </header>
-
-    <div class="content-wrapper">
-        
+    <main class="content-wrapper">
         <div class="notice-board">
             <div class="image-container">
-                <img id="notice-image" src="/picture/index/picture1.png" alt="Notice Image">
+                <img id="notice-image" src="/picture/index/picture1new.png" alt="Notice Image">
             </div>
             <div class="image-text" id="image-text">Its the new notice-board, enjoy the new look</div>
             <div class="timer" id="timer">Time Left: 6s</div>
         </div>
 
-        <div class="updates-box">
-            <h2>Updates</h2>
-            <p>new links</p>
-            <p>added a new blog</p>
-            <p>added one more project</p>
-            <p>views on website 2,133 as of 17/08/25</p>
+        <aside class="sidebar">
+            <div class="glass-box">
+                <span class="supporter-badge">★ Neocities Supporter</span>
+                
+                <h2>Updates</h2>
+                <ul class="update-list">
+                    <li><span>1</span> New home page</li>
+                    <li><span>2</span> New blog page</li>
+                    <li><span>3</span> Got rid of the links page and made linktree in neocities</li>
+                    <li><span>4</span> New project link</li>
+                    <li><span>5</span> Redid all the pages</li>
+                    <li class="stats">Views: <strong>3,442</strong> <small>(19/03/26)</small></li>
+                </ul>
 
-            <h2>Other Links</h2>
-          <li><a href="http://hutcch.online/">my website</a></li>
-          <li><a href="https://www.youtube.com/channel/UCbhfUDBi3YEXRTJGI5EXtQQ" target="_blank">YouTube</a></li>
-          <li><a href="https://www.twitch.tv/hutcch0" target="_blank">Twitch</a></li>
-          <li><a href="https://www.instagram.com/huttch0/" target="_blank">Instagram</a></li>
-          <li><a href="https://twitter.com/Hutcch2" target="_blank">Twitter (X)</a></li>
-          <li><a href="https://x.com/chatroombyHVN">Twitter (X) for website acc</a></li>
-        </div>
-    </div>
+                <div class="hit-counter">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=hutcch-main&style=0007&nbdigits=5&type=page&initCount=3442" alt="Hits">
+                </div>
+
+                <hr>
+                <h2>Socials</h2>
+                <ul class="social-links">
+                    <li><a href="https://www.youtube.com/@hutcch" target="_blank">YouTube</a></li>
+                    <li><a href="https://www.twitch.tv/hutcch0" target="_blank">Twitch</a></li>
+                    <li><a href="https://www.instagram.com/huttch0/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/Hutcch2" target="_blank">Twitter</a></li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 20px; opacity: 0.5;">
+                </div>
+            </div>
+        </aside>
+    </main>
 
     <script src="/script/notice-board/notice-board.js"></script>
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+    </script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+:root {
+    --main-gradient: linear-gradient(135deg, #08030d, #2c003e);
+    --blue-gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+    --card-bg: rgba(255, 255, 255, 0.04);
+    --accent: #38bdf8;
+    --text: #f1f5f9;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    margin-bottom: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+.header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.link-btn:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}

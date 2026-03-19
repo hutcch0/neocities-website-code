@@ -1,51 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>blog</title>
-<link rel="stylesheet" href="/static/css/blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post | What's Going On</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #08030d, #2c003e);
+            --blue-gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --accent: #38bdf8;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--main-gradient);
+            background-attachment: fixed;
+            color: var(--text);
+            line-height: 1.8; 
+        }
+
+        .main-header {
+            background: rgba(8, 3, 13, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .post-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        .post-card h1 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            background: var(--blue-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-meta {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .glass-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-box h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .side-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-list li {
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .side-list a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .side-list a:hover { color: var(--accent); }
+
+        @media (max-width: 800px) {
+            .content-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">
-  <h2>going on</h2>
-</div>
-
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>update on whats going on</h2>
-      <h5>Posted on: December 9, 2024</h5>
-            <p>the chatroom is still being updated</p>
-            <p>the updates will stop on December 15th 2024, i dont know when this will be lifted</p>
-            <p>the website will have music and more projects plus more text on the about me</p>
-            <p>been getting in to blender again and made my own pfp that you can see on the about me</p>
-            <p>been playing r6 as i hate myself</p>
-            <p>getting ready for the holidays</p>
-            <p>been playing remnant 2 with a friend</p>
-            
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>links</h2>
-               <li><a href="https://hutcch.eu.pythonanywhere.com/">the chatroom</a></li>
-               <li><a href="https://x.com/chatroombyHVN">x(twitter)</a></li>
-    </div>
-    <div class="card">
-      <h3>different pages</h3>
-            <ul>
+    <header class="main-header">
+        <nav>
+            <ul class="nav-links">
                 <li><a href="/html/index.html">Home</a></li>
                 <li><a href="/html/about-me.html">About Me</a></li>
-                <li><a href="/html/blog.html">blog</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
                 <li><a href="/html/Projects-Page.html">Projects</a></li>
-                <li><a href="/html/Links-Page.html.html">Links</a></li>
+                <li><a href="/html/card.html">Links</a></li>
             </ul>
-    </div>
-    <div class="card">
-      <h3>github</h3>
-      <p>the files are on github <a href="https://github.com/hutcch0/chatroom-website/tree/main">website</a></p>
-    </div>
-  </div>
-</div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <article class="post-card">
+            <h1>Update on what's going on</h1>
+            <div class="post-meta">Posted on: December 9, 2024</div>
+            
+            <div class="post-content">
+                <p>The chatroom is still being updated. I'm focusing on stability and getting the core features right.</p>
+                <p><strong>Note:</strong> Updates will temporarily stop on December 15th, 2024. I don't know when this lift will be yet, but stay tuned.</p>
+                <p>The website will soon feature background music, more project displays, and a much more detailed "About Me" section.</p>
+                <p>I've been getting into <strong>Blender</strong> again! I actually made my own PFP, which you can check out on the About page.</p>
+                <p>In my free time, I've been playing <em>R6</em> (yes, I hate myself) and <em>Remnant 2</em> with a friend while getting ready for the holidays.</p>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <div class="glass-box">
+                <h3>Quick Links</h3>
+                <ul class="side-list">
+                    <li><a href="https://github.com/hutcch0/chatroom-website/tree/main">GitHub Repo</a></li>
+                </ul>
+            </div>
+
+            <div class="glass-box">
+                <h3>Other Posts</h3>
+                <ul class="side-list">
+                    <li><a href="/html/updates.html">Recent Updates</a></li>
+                    <li><a href="/html/chatroom-updates.html">Chatroom History</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
 
 </body>
 </html>

@@ -3,46 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About | Hutcch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/about-me.css">
+    <style>
+    .profile-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+#profile-pic {
+
+    width: 200px;
+    height: 200px; 
+    
+    object-fit: cover; 
+    object-position: center; 
+    
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.profile-image-wrapper {
+    width: 200px;
+    flex-shrink: 0; 
+}
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+.status-dot {
+    width: 25px;
+    height: 25px;
+    background: #10b981; 
+    border: 4px solid #08030d;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.supporter-badge {
+    color: #f59e0b;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+    </style>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="/html/index.html">Home</a></li>
                 <li><a href="/html/about-me.html">About Me</a></li>
-                <li><a href="/html/blog.html">blog</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
                 <li><a href="/html/Projects-Page.html">Projects</a></li>
-                <li><a href="/html/Links-Page.html.html">Links</a></li>
+                <li><a href="/html/card.html">Links</a></li>
             </ul>
         </nav>
     </header>
+    <main class="content-wrapper">
+        <section class="profile-card">
+            <div class="profile-layout">
+                <div class="profile-image-wrapper">
+                    <img src="/picture/result.png" alt="hutcch" id="profile-pic">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="profile-info">
+                    <span class="supporter-badge">★ Neocities Supporter</span>
+                    <h1 class="gradient-text">I'm Hutcch</h1>
+                    <p class="bio">Digital creator, hobbyist coder, and artist. Just someone doing things sometimes.</p>
+                </div>
+            </div>
+        </section>
+        <div class="info-grid">
+            <section class="glass-box">
+                <h2 class="gradient-text">Hobbies</h2>
+                <ul class="tag-list">
+                    <li>Python</li>
+                    <li>CSS/HTML</li>
+                    <li>FPS Games</li>
+                    <li>Simulation</li>
+                    <li>Digital Art</li>
+                    <li>Blender</li>
+                    <li>Survival Games</li>
+                </ul>
+            </section>
+            <section class="glass-box">
+                <h2 class="gradient-text">Pet Peeves</h2>
+                <ul class="dislike-list">
+                    <li>Liars</li>
+                    <li>Opportunists</li>
+                    <li>Lack of sleep</li>
+                </ul>
+            </section>
+            <section class="glass-box full-width">
+                <h2 class="gradient-text">Final Words</h2>
+                <p>I appreciate you taking the time to read this. It's interesting to consider why someone would be interested in these personal details, but I'm glad you're here. Stick around and check out my projects!</p>
+            </section>
+        </div>
+    </main>
 
-    
-    <div class="about-me-section">
-        <img src="/picture/about-me1.png" alt="Your Photo"> 
-        <h1>About Me</h1>
-        <p>Hello! My name is hutcch. I do somethings sometimes.</p>
-
-        <h2>Hobbies</h2>
-        <ul class="hobbies-list">
-            <li>coding (python, css, html)</li>
-            <li>gaming (FPS, simulation, survival games, sandbox, etc.)</li>
-            <li>drawing (digitally and paper)</li>
-            <li>learning blender</li>
-            <li>sleeping (if i get it)</li>
-
-        <h2>dislikes</h2>
-            <li>liars </li>
-            <li>people that take advantage of someone</li>
-            
-        <h2>thank you</h2>
-            <li>I appreciate you taking the time to read this. It's interesting to consider why someone would be interested in these personal details, but I'm glad you're here.</li>
-        </ul>
-    </div>
-
-<script type="text/javascript" src="https://www.scmplayer.net/script.js" 
-data-config="{'skin':'skins/scmPurple/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Crystal Castle - Kerosene','url':'https://www.youtube.com/watch?v=B0sh5ibSUns&list=RDMMB0sh5ibSUns&start_radio=1'},{'title':'Milk Lame - Hate Me 2','url':'https://www.youtube.com/watch?v=n_NkceHzLaY&list=RDMMB0sh5ibSUns&index=2'},{'title':'Gganbu Daddyphatsnaps','url':'https://www.youtube.com/watch?v=cRw3pAG39Pk&list=RDMMB0sh5ibSUns&index=3'},{'title':'Night Lovell - Polozhenie','url':'https://www.youtube.com/watch?v=pVjdMQ_iAh0&list=RDMMB0sh5ibSUns&index=4'},{'title':'Level 0 Daddyphatsnaps','url':'https://www.youtube.com/watch?v=-uCQ9Sb8yWQ&list=RDMMB0sh5ibSUns&index=6'},{'title':'Eric Reprid - GINGER','url':'https://www.youtube.com/watch?v=uVC8qG3fXc0&list=RDMMB0sh5ibSUns&index=7'},{'title':'Grim Salvo & Witchouse 40k - QUEEN LEECH','url':'https://www.youtube.com/watch?v=mPtxCrdJlGI&list=RDMMB0sh5ibSUns&index=11'},{'title':'BURGOS - I LIKE','url':'https://www.youtube.com/watch?v=fiqzR8aLoNQ&list=RDMMB0sh5ibSUns&index=12'},{'title':'IVOXYGEN - TEEN','url':'https://www.youtube.com/watch?v=MBpKlsAJIBQ&list=RDMMB0sh5ibSUns&index=13'},{'title':'Jake Hill - Dead Summer','url':'https://www.youtube.com/watch?v=l1XYtDerI2s&list=RDMMB0sh5ibSUns&index=14'}]}"></script>
 </body>
 </html>
